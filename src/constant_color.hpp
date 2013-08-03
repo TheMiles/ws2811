@@ -27,10 +27,9 @@ namespace constant_color
 		memcpy( leds, sequence, led_byte_length );
 	}
 
-	void start( uint8_t num_led, uint8_t channel )
+	template< uint8_t num_led >
+	void start( ws2811::rgb (&leds)[num_led], uint8_t channel )
 	{
-		ws2811::rgb leds[60];
-
 		ws2811::rgb sequence[] =
 			{   
 			   	ws2811::rgb( 255,   0,   0 ),

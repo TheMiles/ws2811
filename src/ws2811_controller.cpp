@@ -10,8 +10,9 @@
 #include <stdlib.h>
 //#include "chasers.hpp"
 //#include "flares.hpp"
-#include "color_cycle.hpp"
+// #include "color_cycle.hpp"
 // #include "water_torture.hpp"
+#include "constant_color.hpp"
 
 int main()
 {
@@ -21,6 +22,8 @@ int main()
 	ws2811::rgb leds[led_count];
 	// water_torture::animate( leds, led_count, channel);
 	// flares::flares( channel);
-	//chasers( channel);
-	color_cycle::example_color_cycle( 5 );
+	//chasers( channel );
+	// color_cycle::example_color_cycle( channel );
+	constant_color::start( leds, channel );
+	
 }
